@@ -11,15 +11,15 @@
 .menu-item {
   text-transform: uppercase;
   text-decoration: none;
-  color: blue;
+  color: cadetblue;
   font-weight: 600;
   font-size: 14px;
 
   &.active {
-    color: violet;
+    color: rebeccapurple;
   }
 
   &:hover {
-    color: violet;
+    color: rebeccapurple;
   }
 }
