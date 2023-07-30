@@ -1,0 +1,37 @@
+:host {
+  width: 100%;
+}
+
+.mat-mdc-card {
+  background-color: cadetblue;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.mat-mdc-card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.not-todo-items {
+  color: rebeccapurple;
+  text-align: center;
+  font-weight: 700;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
+input {
+  border: 0;
+  background: transparent;
+  color: #fff;
+  outline: none;
+}

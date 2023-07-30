@@ -1,0 +1,6 @@
+<div class="header">
+  <a *ngFor="let menuItem of menus"
+     [routerLink]="menuItem.path"
+     [routerLinkActive]="['active']"
+     class="menu-item">{{ menuItem.label }}</a>
+</div>

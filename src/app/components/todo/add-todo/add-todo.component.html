@@ -1,0 +1,16 @@
+<div class="add-todo-form">
+  <mat-form-field class="example-form-field">
+    <mat-label>Enter your todo</mat-label>
+    <input [formControl]="addControl" matInput type="text">
+    <button *ngIf="addControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="addControl.reset()">
+      <mat-icon color="primary">close</mat-icon>
+    </button>
+
+    <mat-error *ngIf="addControl.errors?.['required']">
+      This field is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" (click)="addTodoItem()" [disabled]="addControl.invalid">Add</button>
+</div>
+

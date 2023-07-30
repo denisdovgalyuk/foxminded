@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeaderMenu } from './interfaces/header-menu.i';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'foxminded';
+
+  headerMenu: HeaderMenu[] = [
+    {
+      label: 'Todo',
+      path: 'todo'
+    },
+    {
+      label: 'Attached Files',
+      path: 'attached-files'
+    }
+  ]
 }

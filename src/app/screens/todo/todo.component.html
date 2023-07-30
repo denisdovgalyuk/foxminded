@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="title">TODO</div>
+
+    <app-add-todo (add)="todoService.addTodoItem($event)"></app-add-todo>
+    <app-todo-list
+      [list]="todoService.todos"
+      (remove)="todoService.removeTodoItem($event)"
+      (edit)="todoService.editTodoItem($event)"
+    ></app-todo-list>
+  </div>
+</div>
+

@@ -1,0 +1,22 @@
+<ng-container *ngIf="list.length; else notTodoItems">
+  <mat-card *ngFor="let listItem of list">
+    <mat-card-content>
+      {{listItem.text}}
+      <div class="icons">
+        <mat-icon *ngIf="(listItem.id !== editableTodo?.id)" (click)="selectEditableListItem(listItem)">edit</mat-icon>
+        <mat-icon (click)="removeListItem(listItem.id)">delete</mat-icon>
+      </div>
+    </mat-card-content>
+
+    <app-edit-todo
+      *ngIf="editableTodo && (listItem.id === editableTodo?.id)"
+      [todo]="editableTodo"
+      (edit)="editListItem($event)"
+    >
+    </app-edit-todo>
+  </mat-card>
+</ng-container>
+
+<ng-template #notTodoItems>
+  <div class="not-todo-items">Task list is empty</div>
+</ng-template>

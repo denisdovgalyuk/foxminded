@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid grey;
+  padding: 16px 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: blue;
+  font-weight: 600;
+  font-size: 14px;
+
+  &.active {
+    color: violet;
+  }
+
+  &:hover {
+    color: violet;
+  }
+}
