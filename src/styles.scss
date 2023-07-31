@@ -13,3 +13,18 @@ mat-card {
   --mdc-filled-button-container-color: rebeccapurple;
   --mdc-filled-button-label-text-color: #fff;
 }
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 32px auto;
+}
+
+.wrapper {
+  border: 1px solid grey;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

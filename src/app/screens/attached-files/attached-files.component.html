@@ -1,1 +1,29 @@
-<div>AttachedFilesComponent</div>
+<div class="container">
+  <div class="wrapper">
+
+    <div class="files">
+      <div class="file"
+           *ngFor="let file of attachedFiles; let i = index"
+           draggable="true"
+           (dragstart)="handleDragStart($event, i)"
+           (dragend)="handleDragEnd($event)"
+      >
+        <mat-icon>attachment</mat-icon>
+        <span class="file-name">{{ file }}</span>
+      </div>
+    </div>
+
+    <footer>
+      <div class="bin-icon"
+           (dragenter)="handleDragEnter($event)"
+           (dragleave)="handleDragLeave($event)"
+           (dragover)="handleDragOver($event)"
+           (drop)="drop($event)"
+      >
+        <mat-icon>delete_outline</mat-icon>
+      </div>
+    </footer>
+
+
+  </div>
+</div>
