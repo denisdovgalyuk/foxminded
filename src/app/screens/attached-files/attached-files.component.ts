@@ -42,7 +42,7 @@ export class AttachedFilesComponent {
     (event.currentTarget as HTMLElement).classList.remove('over');
   }
 
-  drop(event: DragEvent) {
+  handleDrop(event: DragEvent) {
     event.preventDefault()
     const removedIndex = Number(event.dataTransfer?.getData("index"));
     this.attachedFiles.splice(removedIndex, 1);
